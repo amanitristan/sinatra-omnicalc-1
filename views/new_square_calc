@@ -1,0 +1,9 @@
+<h1>Square My Number</h1>>
+
+<form action="/square/new"
+  <label for=""number"> "Enter Value" </label>
+  <input id="number" type="text" name="users_number">
+
+  <button>Calculate Square</button>
+
+</form>
