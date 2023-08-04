@@ -60,13 +60,17 @@ end
 #=end
 
 get("/random/new") do
+  erb(:random_new)
+end
+
+get("/random/results") do
   @the_min = params.fetch("users_min").to_f
 
   @the_max = params.fetch("users_max").to_f
 
   @random_num = rand(@the_min..@the_max)
 
-  erb(:random_new)
+  erb(:random_results)
 end
 
 
