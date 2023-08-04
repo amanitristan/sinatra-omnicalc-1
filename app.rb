@@ -29,7 +29,7 @@ get("/root/results") do
 
   @the_num = params.fetch("users_number").to_f
 
-  @the_result = @the_num ** 0.5
+  @the_result = @the_num ** 0.5.to_f
 
   erb(:root_results)
 end
