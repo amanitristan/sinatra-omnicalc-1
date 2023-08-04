@@ -66,7 +66,6 @@ get("/random/new") do
 
   @random_num = rand(@the_min..@the_max)
 
-
   erb(:random_new)
 end
 
