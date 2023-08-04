@@ -38,11 +38,11 @@ get("/payment/new") do
   erb(:new_payment)
 end
 
-=begin
+#=begin
 get("/payment/results") do
   
-  @rate = %params.fetch("users_rate").to_f%%
-  r = @rate
+  @rate = params.fetch("users_rate").to_f
+  r = @rate / 100
 
   @years = params.fetch("users_years").to_f
   n = @years * 12.to_f
@@ -57,7 +57,7 @@ get("/payment/results") do
 
   erb(:payment_results)
 end
-=end
+#=end
 
 get("/random/new") do
   @the_min = params.fetch("users_min").to_f
