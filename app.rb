@@ -38,9 +38,10 @@ get("/payment/new") do
   erb(:new_payment)
 end
 
+=begin
 get("/payment/results") do
   
-  @rate = params.fetch(%"users_rate")
+  @rate = params.fetch("users_rate").to_f
 
   @years = params.fetch("users_years").to_f
 
@@ -50,6 +51,7 @@ get("/payment/results") do
 
   erb(:payment_results)
 end
+=end
 
 
 get("/") do
