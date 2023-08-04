@@ -41,17 +41,27 @@ end
 =begin
 get("/payment/results") do
   
-  @rate = params.fetch("users_rate").to_f
+  @rate = %params.fetch("users_rate").to_f%%
+  r = @rate
 
   @years = params.fetch("users_years").to_f
+  n = @years * 12.to_f
 
   @prin = params.fetch("users_principal").to_f
+  pv = @prin
 
-  @payment = ((@rate * @prin) / (1 - (1 + @rate) ** (-@years))
+  numerator = r * pv
+  denominator = 1 - ((1 + r) ** (-n))
+
+  @payment = numerator / denominator
 
   erb(:payment_results)
 end
 =end
+
+get("/random/new") do
+  "Hello World"
+end
 
 
 get("/") do
