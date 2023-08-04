@@ -6,7 +6,7 @@ get("/howdy") do
 end
 
 get("/goodbye") do
-  erb(:goodbye)
+  erb(:bye)
 end
 
 get("/square/new") do
